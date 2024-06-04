@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.75rem;
+    width: 100%;
+}
+:root {
+    --darkbgcolor: black;
+    --lightbgcolor: white;
+    --darktextcolor: white;
+    --lighttextcolor: black;
+    --secheight: calc(100vh - 4.75rem);
+    --cardwidth: 20vw;
+    --cardheight: calc(1.5*(var(--cardwidth)));
+  }
+  body{
+    overflow-x: hidden;
+    background-color: #2C2538;
+  }
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* -------------------------------------------------------------------------------Navigation bar CSS ------------------*/
+nav{
+    width: 100%;
+    background-color: #5D547C;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+}
+.navmenu{
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.navmenu ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.7vw;
+}
+.navmenu a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.navmenu a:hover{
+    color: #e8d3ff;
+}
+.navmenu a:active{
+    color: #9159cd;
+}
+.navmenu a:focus{
+    color: #9159cd;
+}
+/* ------------------------------logo---------------------------------------------------------------------------------------------- */
+.navlogo{
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.navlogo span{
+    font-family: 'Lilita One';
+    font-size: 2rem;
+    white-space: nowrap;
+}
+.navlogo a{
+    text-decoration: none;
+    color: white;
+}
+.navlogo img{
+    height: 4.5rem;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+}
+/* -----------------------------------login----------------------------------------------------------------------------------------- */
+.login{
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.login ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+}
+.login a{
+    text-decoration: none;
+}
+.login li:nth-child(1) a{
+    color: white;
+    padding: 1em;
+    border: 0.15em solid white;
+    font-weight: 600;
+    border-radius: 2em;
+    transition: 0.3s ease;
+}
+.login li:nth-child(2) a{
+    background-color: white;
+    color: black;
+    padding: 1em;
+    border: 0.15em solid white;
+    font-weight: 600;
+    border-radius: 2em;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+.login li a:hover{
+    opacity: 0.7;
+}
+/* ----------------------------section1---------------------------------------------------------------------------------------------- */
+#section1{
+    margin-top: 4.75rem;
+}
+.lr{
+    height: 100%;
+    display: flex;
+}
+.left{
+    width: 50%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    color: white;
+    font-family: 'Lilita One';
+    font-size: 5rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+.subtitle{
+    color: white;
+    padding: 1rem 4vw 4rem 4vw;
+    font-size: 2rem;
+    font-weight: 650;
+    text-align: center;
+}
+.subtitle1{
+    font-size: 1.3rem;
+}
+.left a{
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    background-color: #824fb9;
+    padding: 1.2em 4em 1.2em 4em;
+    border-radius: 2em;
+    transition: 0.35s;
+    
+}
+.left a:hover{
+    color: #824fb9;
+    border: 3px solid #824fb9;
+    border-radius: 2em;
+    background-color: transparent;
+    transition: 0.35s;
+}
+.right{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right img{
+    width: 35rem;
+}
+/* ----------------------------------section2---------------------------------------------------------------------------------------- */
+.titlediv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+    margin: 3.6em 0em 3em 0em;
+}
+.title2{
+    font-size: 2.5rem;
+    color: white;
+}
+.subtitle2{ 
+    font-size: 1.8rem;
+    font-style: italic;
+    color: white;
+}
+.cardcontainer{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+.card{
+    width: var(--cardwidth);
+    height: var(--cardheight);
+    border-radius: 1.3rem;
+    position: relative;
+}
+.card img{
+    width: 100%;
+    height: auto;
+    border-radius: 1.3rem 1.3rem 0rem 0rem;
+}
+.imgcover{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.3rem;
+    position: absolute;
+    top: 0%;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0),rgba(0,0,0,0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),#120F17,#120F17,#120F17,#120F17);
+}
+.numtag{
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+}
+.numtag span{
+    background-color: white;
+    padding: 0.5em;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 0.8rem;
+    border-radius: 1em;
+    white-space: nowrap;
+}
+.cardtext{
+    position: absolute;
+    top: calc(var(--cardwidth)/1.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cardtitle{
+    display: block;
+    color: white;
+    font-weight: 500;
+    font-size: 2rem;
+    padding-bottom: 0.6rem;
+    text-align: center;
+
+}
+.carddescription{
+    color: white;
+    /* font-weight: 500; */
+    font-size: 1.2rem;
+    display: inline-block;
+    width: 80%;
+    padding-top: 0.6rem;
+}
+
+.follow, .following{
+    text-align: center;
+    color: white;
+    background-color: #824fb9;
+    padding: 0.7em 2em;
+    border-radius: 2em;
+    font-weight: 500;
+    cursor: pointer;
+}
+.following{
+    background-color: rgb(41, 113, 41);
+}
+#followbutton1, #followbutton2, #followbutton3, #followbutton4{
+    display: none;
+}
+.following{
+    display: none;
+}
+.follow{
+    display: block;
+}
+body:has(#followbutton1:checked) .followcont1 .following{
+    display: block;
+}
+body:has(#followbutton1:checked) .followcont1 .follow{
+    display: none;
+}
+
+body:has(#followbutton2:checked) .followcont2 .following{
+    display: block;
+}
+body:has(#followbutton2:checked) .followcont2 .follow{
+    display: none;
+}
+
+body:has(#followbutton3:checked) .followcont3 .following{
+    display: block;
+}
+body:has(#followbutton3:checked) .followcont3 .follow{
+    display: none;
+}
+
+body:has(#followbutton4:checked) .followcont4 .following{
+    display: block;
+}
+body:has(#followbutton4:checked) .followcont4 .follow{
+    display: none;
+}
+/* -------------------------------section3--------------------------------------------------------------------------------------- */
+.withsearch{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0em 3em 0em;
+}
+.titlediv3{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7em;
+}
+.title3{
+    font-size: 2.5rem;
+    color: white;
+}
+.subtitle3{ 
+    font-size: 1.8rem;
+    font-style: italic;
+    color: white;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #65507e;
+    border-radius: 2em;
+    margin-bottom: 0.3em;
+}
+#search{
+    border: none;
+    border-radius: 2em 0em 0em 2em;
+    font-size: 1.1rem;
+    color: white;
+    background-color: transparent;
+    padding: 0.4em 3em 0.4em 1em;
+}
+#search::placeholder{
+    color: white;
+}
+.searchbutton{
+    color: white;
+    padding: 0.5em 0.7em 0.5em 0.5em;
+    cursor: pointer;
+}
+.artistdiv{
+    display: flex;
+    gap: 0.7rem;
+    justify-content: center;
+}
+.artistdiv span{
+    color: #c5c5c5;
+}
+.knowmore{
+    color: #824fb9;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 1em;
+    cursor: pointer;
+    /* display: none; */
+    visibility: hidden;
+    /* opacity: 0; */
+    transition: 0.6;
+}
+.cardhover{
+    transition: 0.6s;
+}
+.cardhover:hover{
+    width: calc(var(--cardwidth)*1.1);
+    height: calc(1.5*(calc(var(--cardwidth)*1.1)));
+
+    .cardtext{
+        top: calc(calc(var(--cardwidth)*1.1)/1.1);
+    }
+    .knowmore{
+        /* display: block; */
+        visibility: visible;
+    }
+}
+
+.cardtext{
+    transition: 0.6s;
+}
+/* -----------------------------------section4---------------------------------------------------------------------------------- */
+.titlediv4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.7em 0em 3em 0em;
+}
+.title4{
+    font-size: 2.5rem;
+    color: white;
+}
+.subtitle4{ 
+    font-size: 1.8rem;
+    font-style: italic;
+    color: white;
+}
+.revcontainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin-bottom: 3em;
+}
+.reviewcard{
+    background-color: #120F17;
+    border-radius: 1.2em;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.userinfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 1rem 0rem 1rem;
+}
+.userinfo img{
+    width: 5rem;
+    border-radius: 10rem;
+    margin-right: 0.6rem;
+}
+.userinfo span{
+    color: white;
+    font-size: 3rem;
+    font-weight: 500;
+}
+.content{
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.formcontainer{
+    width: 100%;
+    margin-bottom: 3em;
+}
+.contentcont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.formtitle{
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 2em;
+}
+.flexcenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.contentcont label{
+    color: white;
+    font-size: 1.5rem;
+}
+.contentcont input{
+    border: none;
+    background-color: #a78aca7b;
+    padding: 0.3em 0.4em 0.3em 1em;
+    border-radius: 2em;
+    font-size: 1.4rem;
+    width: 20em;
+    color: white;
+}
+textarea{
+    border: none;
+    background-color: #a78aca7b;
+    border-radius: 1em;
+    font-size: 1.4em;
+    padding: 0.3em 0.4em 0.3em 1em;
+    width: 20em;
+    height: 5em;
+    resize: none;
+    color: white;
+}
+.submitbutton{
+    margin-bottom: 4em;
+}
+.submitbutton button{
+    border: none;
+    background-color: #824fb9;
+    border-radius: 2em;
+    color: white;
+    padding: 1em 2em 1em 2em;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+/* -----------------some of the formating properties that for demonstration----------------------------------------------------- */
+.sections{
+    display: inline-block;
+    width: 100%;
+    /* height: var(--secheight); */
+    /* border: 2px solid black; */
+    /* background-color: #2C2538; */
+}
+#section4{
+    height: auto;
+}
+
+/* ---------------------------------footer----------------------------------------------------------------------------------------- */
+footer{
+    background-color: #120F17;
+}
+.footer{
+    width: 100%;
+    height: 4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.textcontent{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin: 0em 0em 0em 4em;
+}
+.textcontent span{
+    color: grey;
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+.textcontent a{
+    text-decoration: none;
+    color: white;
+}
+.textcontent a:hover{
+    opacity: 0.7;
+}
+.social{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0em 4em 0em 0em;
+}
+.social img{
+    width: 2rem;
+}
+.social a:hover{
+    opacity: 0.7;
+}
+.social span{
+    color: white;
+    font-size: 1.3rem;
+}
+.copyright{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.copyright span{
+    color: rgb(172, 172, 172);
+    padding: 1em 0em 0em 0em;
+}
+/* ----------------------------backtotop------------------------------------------------------------------------------------------ */
+.backtotopdiv a{
+    text-decoration: none;
+}
+.back-to-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #120F17;
+    padding: 2em;
+}
+.back-to-top span{
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.back-to-top img{
+    width: 2.5rem;
+}
