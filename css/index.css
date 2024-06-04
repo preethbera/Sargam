@@ -172,6 +172,7 @@ nav{
 .left a:hover{
     color: #824fb9;
     border: 3px solid #824fb9;
+    display: inline;
     border-radius: 2em;
     background-color: transparent;
     transition: 0.35s;
@@ -183,7 +184,7 @@ nav{
     align-items: center;
 }
 .right img{
-    width: 35rem;
+    width: 30rem;
 }
 /* ----------------------------------section2---------------------------------------------------------------------------------------- */
 .titlediv{
@@ -254,15 +255,15 @@ nav{
     display: block;
     color: white;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.7rem;
     padding-bottom: 0.6rem;
     text-align: center;
 
 }
 .carddescription{
     color: white;
-    /* font-weight: 500; */
-    font-size: 1.2rem;
+    text-align: center;
+    font-size: 1rem;
     display: inline-block;
     width: 80%;
     padding-top: 0.6rem;
@@ -452,7 +453,7 @@ body:has(#followbutton4:checked) .followcont4 .follow{
     padding: 1rem;
     color: white;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 .formcontainer{
     width: 100%;
