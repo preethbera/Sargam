@@ -20,7 +20,6 @@ html{
     --cardheight: calc(1.5*(var(--cardwidth)));
   }
   body{
-    overflow-x: hidden;
     background-color: #2C2538;
   }
 input:focus,
@@ -28,7 +27,7 @@ textarea:focus,
 button:focus {
     outline: none;
 }
-/* -------------------------------------------------------------------------------Navigation bar CSS ------------------*/
+/* ------------------------------------------Navigation bar CSS --------------------------------------------------------------------*/
 nav{
     width: 100%;
     background-color: #5D547C;
@@ -49,12 +48,12 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3.7vw;
+    gap: 3.5vw;
 }
 .navmenu a{
     text-decoration: none;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 600;
     transition: 0.2s;
 }
@@ -76,7 +75,7 @@ nav{
 }
 .navlogo span{
     font-family: 'Lilita One';
-    font-size: 2rem;
+    font-size: 1.9rem;
     white-space: nowrap;
 }
 .navlogo a{
@@ -106,7 +105,7 @@ nav{
 }
 .login li:nth-child(1) a{
     color: white;
-    padding: 1em;
+    padding: 0.8em;
     border: 0.15em solid white;
     font-weight: 600;
     border-radius: 2em;
@@ -115,7 +114,7 @@ nav{
 .login li:nth-child(2) a{
     background-color: white;
     color: black;
-    padding: 1em;
+    padding: 0.8em;
     border: 0.15em solid white;
     font-weight: 600;
     border-radius: 2em;
@@ -164,6 +163,7 @@ nav{
     text-decoration: none;
     color: white;
     background-color: #824fb9;
+    border: 3px solid #824fb9;
     padding: 1.2em 4em 1.2em 4em;
     border-radius: 2em;
     transition: 0.35s;
@@ -171,11 +171,11 @@ nav{
 }
 .left a:hover{
     color: #824fb9;
-    border: 3px solid #824fb9;
     display: inline;
     border-radius: 2em;
     background-color: transparent;
     transition: 0.35s;
+    box-shadow: #824fb9 0 0 0.4em 0.08em;
 }
 .right{
     width: 50%;
@@ -194,6 +194,8 @@ nav{
     align-items: center;
     gap: 0rem;
     margin: 3.6em 0em 3em 0em;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 .title2{
     font-size: 2.5rem;
@@ -362,6 +364,11 @@ body:has(#followbutton4:checked) .followcont4 .follow{
     color: white;
     padding: 0.5em 0.7em 0.5em 0.5em;
     cursor: pointer;
+    border-radius: 3em;
+    transition: 0.2s;
+}
+.searchbutton:hover{
+    background-color: #916eb8;
 }
 .artistdiv{
     display: flex;
@@ -512,6 +519,9 @@ textarea{
     cursor: pointer;
     font-size: 1.3rem;
 }
+.submitbutton button:hover{
+    opacity: 0.7;
+}
 /* -----------------some of the formating properties that for demonstration----------------------------------------------------- */
 .sections{
     display: inline-block;
@@ -596,4 +606,8 @@ footer{
 }
 .back-to-top img{
     width: 2.5rem;
+}
+/* -----------------------------------------------shadow and other changes------------------------------------------------------- */
+.shadow{
+    box-shadow: #150625 0.5em 0.5em 1em 0.1em;
 }
